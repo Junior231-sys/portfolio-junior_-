@@ -1,0 +1,73 @@
+/* Base */
+*{box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#ffffff;color:#222;margin:0;line-height:1.6}
+a{color:inherit}
+header{background:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 6%}
+.logo .name{font-weight:700;color:#111}
+.logo .subtitle{font-size:0.9rem;color:#666;margin-top:4px}
+.nav-links{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
+.nav-links a{text-decoration:none;color:#333;padding:6px 8px;border-radius:6px;transition:color .25s,background .25s}
+.nav-links a.active,.nav-links a:hover{color:#33ccff;background:rgba(51,204,255,0.06)}
+
+/* Loader */
+.loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#33ccff;color:#fff;z-index:2000}
+.loader-inner{font-weight:700;font-size:1.1rem}
+.loader .dots{animation:dots 1s steps(4, end) infinite}
+@keyframes dots{0%{opacity:0.2}50%{opacity:1}100%{opacity:0.2}}
+
+/* Hero */
+.hero{padding:6rem 6% 4rem;text-align:center;background:#f7fbfd}
+.hero-content h1{font-size:1.6rem;max-width:900px;margin:0 auto 1.5rem;color:#111}
+.hero-buttons{display:flex;gap:0.8rem;justify-content:center}
+.btn-primary{background:#33ccff;color:#fff;padding:0.8rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;transition:transform .2s,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(51,204,255,0.18)}
+.btn-outline{border:2px solid #33ccff;color:#33ccff;padding:0.7rem 1.1rem;border-radius:8px;text-decoration:none;font-weight:700}
+.btn-outline:hover{background:#33ccff;color:#fff}
+
+/* Sections */
+section{padding:3.5rem 6%}
+section + section{background:#fbfcfd}
+h2{color:#33ccff;font-size:1.6rem;margin-bottom:1rem}
+.intro-text{color:#555;margin-bottom:1.5rem}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:1.5rem}
+.project-card{background:#fff;padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.05);transition:transform .25s,box-shadow .25s}
+.project-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 14px 30px rgba(0,0,0,0.08)}
+.project-thumb{height:140px;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center;color:#777;font-weight:600}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.skill h4{margin:0 0 0.5rem}
+.progress{background:#eef6fb;border-radius:999px;overflow:hidden;height:18px}
+.progress span{display:block;height:100%;background:#33ccff;color:#fff;text-align:right;padding-right:8px;font-weight:700;line-height:18px;transition:width 1.4s ease}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.service-card{background:#fff;padding:1.2rem;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.05);transition:transform .25s}
+.service-card:hover{transform:translateY(-8px)}
+
+/* Testimonials */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.testimonial-card{background:#fff;padding:1.2rem;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+
+/* Contact */
+.contact-section form{max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:0.8rem}
+input[type="text"],input[type="email"],textarea{padding:0.8rem;border-radius:8px;border:1px solid #e6eef2}
+.form-status{margin-top:0.5rem;color:green;font-weight:700}
+
+/* Footer */
+footer{background:#fff;padding:1rem 6%;box-shadow:0 -2px 6px rgba(0,0,0,0.03)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+
+/* Fade / Reveal */
+.fade-section{opacity:0;transform:translateY(20px) scale(.995);transition:all .9s cubic-bezier(.16,.84,.38,1)}
+.fade-section.visible{opacity:1;transform:none}
+
+/* Responsive */
+@media(max-width:800px){
+  .nav-links{display:none}
+  .navbar{padding:1rem 4%}
+  .hero-content h1{font-size:1.2rem}
+}

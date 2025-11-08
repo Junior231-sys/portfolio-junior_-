@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - TCHOUMBA TIBONCHO FRED JUNIOR</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script defer src="main.js"></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script> (function(){ emailjs.init("YOUR_PUBLIC_KEY"); })(); </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <div class="name">TCHOUMBA TIBONCHO FRED JUNIOR</div>
+        <div class="subtitle">Développeur web junior</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="temoignages.html">Témoignages</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section fade-section">
+      <h2>Contact</h2>
+      <p class="intro-text">Remplis le formulaire ci-dessous pour me contacter directement.</p>
+
+      <form id="contact-form">
+        <label for="name">Nom</label>
+        <input id="name" name="from_name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="reply_to" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button id="send-btn" type="submit" class="btn-primary">Envoyer</button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+
+      <p class="note">Remplacez <code>YOUR_SERVICE_ID</code>, <code>YOUR_TEMPLATE_ID</code> et <code>YOUR_PUBLIC_KEY</code> dans le code pour activer EmailJS. Ton adresse de réception doit être configurée dans le template EmailJS.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2025 TCHOUMBA TIBONCHO FRED JUNIOR</div>
+    </div>
+  </footer>
+</body>
+</html>
